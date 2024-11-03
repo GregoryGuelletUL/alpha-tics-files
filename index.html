@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alpha-Tics-Files</title>
+    
+</head>
+<body>
+    <button class="sidebar-toggle">☰</button>
+    
+    <nav class="sidebar">
+        <div class="module-group">
+            <div class="module-header">
+                <span>Module 1: La souris</span>
+                <span class="arrow">▶</span>
+            </div>
+            <div class="sub-modules">
+                <div class="sub-module" data-module="souris" data-submodule="1">Les couleurs</div>
+                <div class="sub-module" data-module="souris" data-submodule="2">Les formes</div>
+                <div class="sub-module" data-module="souris" data-submodule="3">Les émotions au féminin 1</div>
+                <div class="sub-module" data-module="souris" data-submodule="4">Les émotions au féminin 2</div>
+                <div class="sub-module" data-module="souris" data-submodule="5">Les émotions au masculin 1</div>
+                <div class="sub-module" data-module="souris" data-submodule="6">Les émotions au masculin 2</div>
+                <div class="sub-module" data-module="souris" data-submodule="7">Le visage</div>
+            </div>
+        </div>
+
+        <div class="module-group">
+            <div class="module-header">
+                <span>Module 2: Le clavier</span>
+                <span class="arrow">▶</span>
+            </div>
+            <div class="sub-modules">
+                <div class="sub-module" data-module="clavier" data-submodule="1">Mots croisés 1</div>
+                <div class="sub-module" data-module="clavier" data-submodule="2">Mots croisés 2</div>
+                <!--<div class="sub-module" data-module="clavier" data-submodule="3">Frappe rapide</div>-->
+            </div>
+        </div>
+
+        
+        <div class="module-group">
+            <div class="module-header">
+                <span>Module 3: Lecture</span>
+                <span class="arrow">▶</span>
+            </div>
+            <div class="sub-modules">
+                <div class="sub-module" data-module="lecture" data-submodule="1">Quiz</div>
+                <!--<div class="sub-module" data-module="lecture" data-submodule="2">Tableur</div>-->
+                <!--<div class="sub-module" data-module="lecture" data-submodule="3">Gestion des emails</div>-->
+            </div>
+        </div>
+
+        <!--
+        <div class="module-group">
+            <div class="module-header">
+                <span>Module 4: Correction avec l'IA</span>
+                <span class="arrow">▶</span>
+            </div>
+            <div class="sub-modules">
+                <div class="sub-module" data-module="ia" data-submodule="1">Bases de l'IA</div>
+                <div class="sub-module" data-module="ia" data-submodule="2">Correction de textes</div>
+                <div class="sub-module" data-module="ia" data-submodule="3">Génération de contenu</div>
+            </div>
+        </div>
+
+        <div class="module-group">
+            <div class="module-header">
+                <span>Module 5: Canva</span>
+                <span class="arrow">▶</span>
+            </div>
+            <div class="sub-modules">
+                <div class="sub-module" data-module="canva" data-submodule="1">Interface de base</div>
+                <div class="sub-module" data-module="canva" data-submodule="2">Création de visuels</div>
+                <div class="sub-module" data-module="canva" data-submodule="3">Templates avancés</div>
+            </div>
+        </div>
+
+        <div class="module-group">
+            <div class="module-header">
+                <span>Module 6: Montage Multimédia</span>
+                <span class="arrow">▶</span>
+            </div>
+            <div class="sub-modules">
+                <div class="sub-module" data-module="multimedia" data-submodule="1">Montage photo</div>
+                <div class="sub-module" data-module="multimedia" data-submodule="2">Montage vidéo</div>
+                <div class="sub-module" data-module="multimedia" data-submodule="3">Édition audio</div>
+            </div>
+        </div>
+
+        -->
+    </nav>
+    
+
+    <main class="main-content">
+        <h1 class="module-title">Bienvenue sur la plateforme</h1>
+        <div id="exercise-container" class="exercise-container">
+            <p>Sélectionnez un module pour commencer.</p>
+            <img src="files/clavier-dico.jpeg" alt="dico-pc">
+        </div>
+    </main>
+
+    <script>
+        // Configuration des exercices
+        const exercises = {
+            souris: {
+                1: {
+                    title: "Exercice 1 - Assemble les couleurs",
+                    url: "https://learningapps.org/watch?v=p4ov48bca24"
+                },
+                2: {
+                    title: "Exercice 2 - Les formes",
+                    url: "https://learningapps.org/watch?v=poj94xkmk24"
+                },
+                3: {
+                    title: "Exercice 3 - Les émotions au féminin 1",
+                    url: "https://learningapps.org/watch?v=ph485ews224"
+                },
+                4: {
+                    title: "Exercice 4 - Les émotions au féminin 2",
+                    url: "https://learningapps.org/watch?v=pebtq57jc24"
+                },
+                5: {
+                    title: "Exercice 5 - Les émotions au masculin 1",
+                    url: "https://learningapps.org/watch?v=p6bnxqpna24"
+                },
+                6: {
+                    title: "Exercice 6 - Les émotions au masculin 2",
+                    url: "https://learningapps.org/watch?v=p456sn5yk24"
+                },
+                7: {
+                    title: "Exercice 7 - Le visage",
+                    url: "https://learningapps.org/watch?v=paoyz45hk24"
+                }
+
+            },
+            clavier: {
+                1: {
+                    title: "Exercice 1 - Mots croisés 1",
+                    url: "https://learningapps.org/watch?v=p0jbifbm524"
+                },
+                2: {
+                    title: "Exercice 2 - Mots croisés 2",
+                    url: "https://learningapps.org/watch?v=pk9keh2kc24"
+                },
+                3: {
+                    title: "Exercice 3 - Mots croisés 3",
+                    url: "https://learningapps.org/watch?v=clavier3"
+                }
+            },
+            lecture: {
+                1: {
+                    title: "Exercice 1 - Quiz du millionnaire 1",
+                    url: "https://learningapps.org/watch?v=phwdzv3j324"
+                },
+                2: {
+                    title: "TExercice 2 - Quiz du millionnaire 2",
+                    url: "https://learningapps.org/watch?v=bureautique2"
+                },
+                3: {
+                    title: "Exercice 3 - Quiz du millionnaire 3",
+                    url: "https://learningapps.org/watch?v=bureautique3"
+                }
+            },
+            ia: {
+                1: {
+                    title: "Introduction aux outils d'IA",
+                    url: "https://learningapps.org/watch?v=ia1"
+                },
+                2: {
+                    title: "Correction de textes avec l'IA",
+                    url: "https://learningapps.org/watch?v=ia2"
+                },
+                3: {
+                    title: "Génération de contenu assistée",
+                    url: "https://learningapps.org/watch?v=ia3"
+                }
+            },
+            canva: {
+                1: {
+                    title: "Premiers pas avec Canva",
+                    url: "https://learningapps.org/watch?v=canva1"
+                },
+                2: {
+                    title: "Création de visuels professionnels",
+                    url: "https://learningapps.org/watch?v=canva2"
+                },
+                3: {
+                    title: "Utilisation avancée des templates",
+                    url: "https://learningapps.org/watch?v=canva3"
+                }
+            },
+            multimedia: {
+                1: {
+                    title: "Bases du montage photo",
+                    url: "https://learningapps.org/watch?v=multimedia1"
+                },
+                2: {
+                    title: "Introduction au montage vidéo",
+                    url: "https://learningapps.org/watch?v=multimedia2"
+                },
+                3: {
+                    title: "Édition audio de base",
+                    url: "https://learningapps.org/watch?v=multimedia3"
+                }
+            }
+        };
+
+        // Gestion de la navigation mobile
+        const sidebarToggle = document.querySelector('.sidebar-toggle');
+        const sidebar = document.querySelector('.sidebar');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('expanded');
+        });
+
+        // Gestion des modules expandables
+        const moduleHeaders = document.querySelectorAll('.module-header');
+        
+        moduleHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const subModules = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+                
+                subModules.classList.toggle('expanded');
+                arrow.style.transform = subModules.classList.contains('expanded') 
+                    ? 'rotate(90deg)' 
+                    : 'rotate(0deg)';
+            });
+        });
+
+        // Gestion des sous-modules
+        const subModules = document.querySelectorAll('.sub-module');
+        const exerciseContainer = document.getElementById('exercise-container');
+        
+        subModules.forEach(subModule => {
+            subModule.addEventListener('click', () => {
+                subModules.forEach(sm => sm.classList.remove('active'));
+                subModule.classList.add('active');
+                
+                const moduleId = subModule.dataset.module;
+                const subModuleId = subModule.dataset.submodule;
+                loadExercise(moduleId, subModuleId);
+                
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('expanded');
+                }
+            });
+        });
+
+        // Fonction pour charger un exercice
+        function loadExercise(moduleId, subModuleId) {
+            const exercise = exercises[moduleId]?.[subModuleId];
+            
+            if (exercise) {
+                const moduleTitle = document.querySelector('.module-title');
+                moduleTitle.textContent = exercise.title;
+                
+                exerciseContainer.innerHTML = `
+                    <div class="iframe-wrapper">
+                        <iframe 
+                            src="${exercise.url}"
+                            allowfullscreen="true"
+                            webkitallowfullscreen="true"
+                            mozallowfullscreen="true">
+                        </iframe>
+                    </div>
+                `;
+            } else {
+                exerciseContainer.innerHTML = `
+                    <p>Cet exercice n'est pas encore disponible.</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
